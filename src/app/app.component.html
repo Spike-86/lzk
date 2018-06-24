@@ -1,8 +1,9 @@
 <h1>Поиск запчастей</h1>
 
-<input #findArt type="text" placeholder="oc195" findArt.value (blur)="setVal(findArt.value)">
+<input #findArt type="text" placeholder="oc195" findArt.value (blur)="setVal(findArt.value)" (keyup.enter)="getByArticul(findArt.value)">
 
-<button (click)="postData()">Поиск</button>
+<button (click)="getByArticul(findArt.value)">Поиск</button>
+<button (click)="getBrands()">Бренды</button>
 
 <table>
   <thead>
@@ -12,15 +13,22 @@
       <th>Наименование</th>
       <th>Цена</th>
       <th>Доступно</th>
+      <th>Поставщик</th>
     </tr>
   </thead>
-  <tr *ngFor="let item of myJsonString">
+  <tr *ngFor="let item of myJsonString" (click)="getByBrand(item.brand, item.art)">
     <td>{{ item.brand }}</td>
     <td>{{ item.art }}</td>
     <td>{{ item.naim }}</td>
-    <td>{{ item.price }} $</td>
+    <td>{{ item.price }} BYN</td>
     <td>{{ item.qty }}</td>
+    <td>{{ item.postavsh }}</td>
     <td><button (click)="addItem(item)">В корзину</button></td>
+  </tr>
+</table>
+<table>
+  <tr *ngFor="let brand of brands">
+    <td>{{ brand }}</td>
   </tr>
 </table>
 <app-basket></app-basket>
