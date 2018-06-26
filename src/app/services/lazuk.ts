@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders,} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +21,7 @@ export class Lazuk {
       article: art
     };
 
-    let url = 'http://localhost:3030/byarticul';
+    const url = 'http://localhost:3030/byarticul';
     return this.http.post(url, body, httpOptions);
   }
 
@@ -38,7 +38,7 @@ export class Lazuk {
       article: art
     };
 
-    let url = 'http://localhost:3030/bybrand';
+    const url = 'http://localhost:3030/bybrand';
     return this.http.post(url, body, httpOptions);
   }
 
