@@ -1,1 +1,9 @@
-<app-findparts></app-findparts>
+<nav>
+  <ul>
+    <li><a routerLink="/">Главная</a></li>
+    <li *ngIf="booleanAuth"><a routerLink="/findparts">Поиск запчастей</a></li>
+  </ul>
+
+</nav>
+<router-outlet></router-outlet>
+<!--<app-findparts></app-findparts>-->

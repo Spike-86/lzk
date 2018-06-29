@@ -5,6 +5,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BasketComponent } from './basket/basket.component';
 import { FindpartsComponent } from './findparts/findparts.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FindpartsComponent } from './findparts/findparts.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
