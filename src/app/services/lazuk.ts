@@ -21,8 +21,10 @@ export class Lazuk {
       article: art
     };
 
-    const url = 'http://localhost:3030/byarticul';
-    return this.http.post(url, body, httpOptions);
+    // const url = 'http://localhost:3030/byarticul';
+    const fakeJSON = '../assets/fake.json';
+    // return this.http.post(url, body, httpOptions);
+    return this.http.get(fakeJSON);
   }
 
   getItemsBrand(brand, art) {

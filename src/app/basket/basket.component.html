@@ -1,4 +1,19 @@
 <h1>Корзина</h1>
-<ul>
-  <li *ngFor="let bask of basket">{{ bask.key }}</li>
-</ul>
+<table *ngIf="basket.length > 0">
+  <thead>
+    <tr>
+      <th>Бренд</th>
+      <th>Артикул</th>
+      <th>Цена</th>
+      <th>Количество</th>
+      <th>Поставщик</th>
+    </tr>
+    <tr *ngFor="let bask of basket">
+      <td>{{ bask.brand }}</td>
+      <td>{{ bask.art }}</td>
+      <td>{{ bask.price }}</td>
+      <td></td>
+      <td>{{ bask.postavsh }}</td>
+    </tr>
+  </thead>
+</table>

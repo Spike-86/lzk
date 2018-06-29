@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppComponent} from "../app.component";
+import { FindpartsComponent} from '../findparts/findparts.component';
 
 @Component({
   selector: 'app-basket',
@@ -8,9 +8,9 @@ import { AppComponent} from "../app.component";
 })
 export class BasketComponent implements OnInit {
 
-  constructor(private app: AppComponent) { }
+  constructor(private findParts: FindpartsComponent) { }
 
-  public basket = this.app.returnBasket();
+  public basket = this.findParts.returnBasket();
 
   ngOnInit() {
   }

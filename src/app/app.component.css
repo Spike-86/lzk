@@ -1,32 +1,4 @@
-
-h1 {
-  text-align: center;
-  padding: 10px 0;
-  background-color: lightyellow;
-}
-
-input {
-  width: 90%;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-tr:nth-child(even) {
-  background-color: lightblue;
-}
-
-th, td {
-  text-align: center;
-}
-
-td {
-  padding: 5px 0;
-}
-
-tr:hover {
-  background-color: yellow;
-  cursor: pointer;
+:host {
+  display: block;
+  padding: 0 100px;
 }
