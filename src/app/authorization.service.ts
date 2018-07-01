@@ -9,6 +9,6 @@ export class AuthorizationService implements CanActivate {
   constructor() { }
 
   canActivate(): boolean {
-    return false;
+    return true;
   }
 }

@@ -1,9 +1,10 @@
-<nav>
-  <ul>
-    <li><a routerLink="/">Главная</a></li>
-    <li *ngIf="booleanAuth"><a routerLink="/findparts">Поиск запчастей</a></li>
-  </ul>
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item><a routerLink="/">Главная</a></button>
+  <button mat-menu-item *ngIf="booleanAuth"><a routerLink="/findparts">Поиск запчастей</a></button>
+</mat-menu>
 
-</nav>
+<button mat-icon-button [matMenuTriggerFor]="appMenu">
+  <mat-icon>home</mat-icon>
+</button>
 <router-outlet></router-outlet>
 <!--<app-findparts></app-findparts>-->
